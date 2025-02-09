@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playful Text Animation</title>
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            font-weight: 900;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #2128bd;
+        }
+
+        body,
+        * {
+            cursor: none;
+        }
+
+        .shapes {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .shape-1 {
+            background: #005ffe;
+            width: 650px;
+            height: 650px;
+            margin: -325px 0 0 -325px;
+        }
+
+        .shape-2 {
+            background: #ffe5e3;
+            width: 440px;
+            height: 440px;
+            margin: -220px 0 0 -220px;
+        }
+
+        .shape-3 {
+            background: #ffcc57;
+            width: 270px;
+            height: 270px;
+            margin: -135px 0 0 -135px;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: #fff;
+            mix-blend-mode: screen;
+        }
+
+        h1 {
+            font-size: 10vw;
+            color: #000;
+            margin: 0;
+            text-align: center;
+        }
+
+        .cursor {
+            position: fixed;
+            background: #2128bd;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border-radius: 50%;
+            will-change: transform;
+            user-select: none;
+            pointer-events: none;
+            z-index: 10000;
+        }
+
+        .letter {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .letter.jump {
+            animation: jump 0.3s ease;
+        }
+
+        @keyframes jump {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #000;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="content">
+        <h1 id="animated-text">
+            &nbsp;&nbsp;&nbsp;&nbsp;Teaspoon&nbsp;<br>opens&nbsp;&nbsp;&nbsp;&nbsp;<br>Nano Honeycomb
+        </h1>
+    </div>
+    <div class="scroll-indicator">滑动鼠标进入</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        document.body.addEventListener("mousemove", evt => {
+            const mouseX = evt.clientX;
+            const mouseY = evt.clientY;
+
+            gsap.set(".cursor", {
+                x: mouseX,
+                y: mouseY
+            });
+
+            gsap.to(".shape", {
+                x: mouseX,
+                y: mouseY,
+                stagger: -0.1
+            });
+        });
+
+        // 文字动画
+        const text = document.getElementById('animated-text');
+        const letters = text.textContent.split('');
+        text.textContent = '';
+
+        letters.forEach(letter => {
+            const span = document.createElement('span');
+            span.textContent = letter;
+            span.className = 'letter';
+            text.appendChild(span);
+        });
+
+        function animateRandomLetter() {
+            const letters = document.querySelectorAll('.letter');
+            const randomIndex = Math.floor(Math.random() * letters.length);
+            const letter = letters[randomIndex];
+
+            letter.classList.add('jump');
+            setTimeout(() => {
+                letter.classList.remove('jump');
+            }, 300);
+        }
+
+        setInterval(animateRandomLetter, 1000);
+
+        // 滚动过渡
+        let scrollProgress = 0;
+        const maxScroll = window.innerHeight / 2;
+
+        window.addEventListener('wheel', (event) => {
+            if (event.deltaY > 0) {
+                scrollProgress += event.deltaY;
+                if (scrollProgress > maxScroll) {
+                    scrollProgress = maxScroll;
+                }
+            } else {
+                scrollProgress -= Math.abs(event.deltaY);
+                if (scrollProgress < 0) {
+                    scrollProgress = 0;
+                }
+            }
+
+            const opacity = scrollProgress / maxScroll;
+            document.body.style.backgroundColor = `rgba(33, 40, 189, ${opacity})`;
+
+            if (opacity >= 1) {
+                setTimeout(() => {
+                    window.location.href = "home.html";
+                }, 500);
+            }
+        });
+
+        // 触摸设备支持
+        let touchStartY = 0;
+        window.addEventListener('touchstart', (event) => {
+            touchStartY = event.touches[0].clientY;
+        });
+
+        window.addEventListener('touchmove', (event) => {
+            const touchY = event.touches[0].clientY;
+            const deltaY = touchStartY - touchY;
+
+            scrollProgress += deltaY;
+            if (scrollProgress > maxScroll) {
+                scrollProgress = maxScroll;
+            } else if (scrollProgress < 0) {
+                scrollProgress = 0;
+            }
+
+            const opacity = scrollProgress / maxScroll;
+            document.body.style.backgroundColor = `rgba(33, 40, 189, ${opacity})`;
+
+            if (opacity >= 1) {
+                setTimeout(() => {
+                    window.location.href = "home.html";
+                }, 500);
+            }
+
+            touchStartY = touchY;
+        });
+    </script>
+</body>
+
+</html>

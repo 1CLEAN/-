@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术介绍</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$$', '\$$']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+
+    </script>
+    <style>
+        /* 之前的样式保持不变 */
+
+        .equation-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .equation {
+            margin: 1em 0;
+            overflow-x: auto;
+        }
+
+        .equation-image {
+            max-width: 80%;
+            height: auto;
+            margin-top: 10px;
+            animation: grow 1s ease-out;
+        }
+
+        @keyframes grow {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h2 class="sidebar-title">技术导航</h2>
+            <button class="sidebar-button active" data-section="experiment">实验</button>
+            <button class="sidebar-button" data-section="modeling">建模</button>
+        </nav>
+        <main class="content">
+            <h1 class="main-title">技术</h1>
+            <div id="experiment" class="content-box">
+                <h2 class="content-title">实验设计</h2>
+                <p class="content-text">
+                <h3>1. 酵母定植与激活</h3>
+                <h4>目标：</h4>
+                使酵母能够在患者的肠道内定植，并通过口服茶成分激活酵母。
+                <h4>实验内容：</h4>
+                首先，患者口服经过工程化的酵母，这些酵母能够在肠道中定植。使用特定的启动子（例如半乳糖启动子）和茶成分（如儿茶素、咖啡因等）激活酵母。茶成分作为激活因子通过其与酵母细胞表面的受体结合，启动下游的基因表达。
+                <h4>预期结果：</h4>
+                在茶成分的作用下，酵母的激活浓度会显著增加，相关的靶向基因会被激活。
+
+                <h3>2. 酵母迁移至骨关节</h3>
+                <h4>目标：</h4>
+                确保酵母能精准迁移至目标区域（骨关节）。
+                <h4>实验内容：</h4>
+                通过控制酵母表面受体（例如咖啡因受体），使其对骨关节处的某些诱导信号敏感。茶成分或其他化学分子可以作为诱导信号，激活酵母迁移到骨关节处。可以通过设置酵母在体内的迁移速率和最大迁移容量来调控其到达靶点的精度。
+                <h4>预期结果：</h4>
+                激活后的酵母应能有效迁移到骨关节，并在此处定植。
+
+                <h3>3. 激活炎症趋向基因</h3>
+                <h4>目标：</h4>
+                在骨关节处激活炎症基因，并启动抗炎症反应。
+                <h4>实验内容：</h4>
+                在酵母到达目标区域后，通过激活炎症趋向基因促进酵母向患处集结。这些基因通过酵母的表面受体以及骨关节处的局部环境，激活与炎症相关的基因和信号通路。
+                <h4>预期结果：</h4>
+                酵母在骨关节处启动炎症基因的表达，减少关节处的炎症。
+
+                <h3>4. 细外囊泡分泌与治疗</h3>
+                <h4>目标：</h4>
+                通过细外囊泡分泌生长因子和镇痛因子，治疗关节炎。
+                <h4>实验内容：</h4>
+                激活炎症趋向基因后，酵母会分泌带有治疗因子的细外囊泡，这些因子包括生长因子和镇痛因子。细外囊泡通过与骨关节组织相互作用，促进修复并减轻疼痛。
+                <h4>预期结果：</h4>
+                通过分泌细外囊泡，酵母能够缓解关节炎引起的症状，促进组织的修复和镇痛。
+
+                <h3>5. 自杀开关的激活与系统清除</h3>
+                <h4>目标：</h4>
+                在治疗结束后，确保系统不会过度活跃，启动自我清除机制。
+                <h4>实验内容：</h4>
+                在治疗完成后，通过激活自杀开关（例如使用自杀开关基因，如基于药物或条件触发的开关），确保酵母能够自行清除。这将防止酵母过度定植或在体内产生不良反应。
+                <h4>预期结果：</h4>
+                自杀开关的启动将清除体内不再需要的酵母细胞，确保治疗结束后没有副作用。
+
+                <h2 class="content-title">实验验证与优化</h2>
+                <h4>1. 酵母定植与激活验证</h4>
+                <h4>实验内容：</h4>
+                构建包含茶成分激活元件的酵母质粒，使用荧光报告基因（如GFP）来监测酵母激活后的表达情况。通过口服实验，比较不同条件下酵母定植的效果。
+                <h4>预期结果：</h4>
+                在茶成分的激活下，荧光强度显著提高，证明茶成分能够有效激活酵母。
+
+                <h4>2. 迁移实验验证</h4>
+                <h4>实验内容：</h4>
+                通过定量测量酵母在不同诱导条件下的迁移速率，使用活性染料或荧光标记的酵母来追踪其迁移路径。
+                <h4>预期结果：</h4>
+                茶成分激活后，酵母迁移至骨关节，并显示明显的靶向迁移。
+
+                <h4>3. 炎症基因激活与治疗效果</h4>
+                <h4>实验内容：</h4>
+                使用实时PCR或荧光定量分析，检测炎症基因的表达水平；同时测定关节液中的生长因子和镇痛因子的浓度变化。
+                <h4>预期结果：</h4>
+                在酵母到达骨关节并激活炎症基因后，关节液中应显示出明显的治疗因子浓度变化。
+
+                <h4>4. 自杀开关验证</h4>
+                <h4>实验内容：</h4>
+                在治疗后通过引发自杀开关，观察酵母的自我清除效果。可使用共聚焦显微镜观察酵母的死亡情况，或通过定量PCR检测自杀基因的表达。
+                <h4>预期结果：</h4>
+                自杀开关激活后，酵母应显著减少，确认其成功清除。
+
+                </p>
+            </div>
+            <div id="modeling" class="content-box">
+                <h2 class="content-title">建模</h2>
+                <p class="content-text">
+                <h1>茶成分与酵母细胞相互作用模型</h1>
+
+                <h2>1.茶成分的吸收</h2>
+                <div class="equation">
+                    $$\frac{dQ_{tea}}{dt} = -k_{absorption} \cdot Q_{tea}$$
+                </div>
+                <ul>
+                    <li>$Q_{tea}$：茶成分的浓度（单位：mg）。</li>
+                    <li>$k_{absorption}$：茶成分的吸收速率常数（单位：min$^{-1}$）。它表示茶成分在单位时间内被吸收的速率。</li>
+                </ul>
+                <div class="equation-container">
+                    <img src="../img/茶成分.png" alt="茶成分吸收图" class="equation-image">
+                </div>
+                <h2>2.酵母的定植与激活</h2>
+                <div class="equation">
+                    $$\frac{dQ_{yeast}}{dt} = k_{activation} \cdot Q_{tea} \cdot (1 - \frac{Q_{yeast}}{K})$$
+                </div>
+                <ul>
+                    <li>$Q_{yeast}$：酵母的浓度（单位：mg）。</li>
+                    <li>$k_{activation}$：酵母激活的速率常数（单位：min$^{-1}$）。它表示茶成分激活酵母的速率。</li>
+                    <li>$K$：最大酵母定植容量（单位：mg）。当酵母的浓度接近该值时，酵母激活的速率会逐渐减缓。</li>
+                </ul>
+                <div class="equation-container">
+                    <img src="../img/酵母定植激活.png" alt="酵母定植激活图" class="equation-image">
+                </div>
+
+                <h2>3.酵母迁移</h2>
+                <div class="equation">
+                    $$\frac{dQ_{yeast\_move}}{dt} = k_{migration} \cdot Q_{yeast} \cdot (1 -
+                    \frac{Q_{yeast\_move}}{K_{move}})$$
+                </div>
+                <ul>
+                    <li>$Q_{yeast\_move}$：酵母在目标位置（如骨关节）的浓度（单位：mg）。</li>
+                    <li>$k_{migration}$：酵母迁移的速率常数（单位：min$^{-1}$）。它表示酵母从原位置迁移到目标位置的速率。</li>
+                    <li>$K_{move}$：酵母迁移的最大容量（单位：mg）。当迁移的酵母浓度接近最大容量时，迁移速率会减缓。</li>
+                </ul>
+                <div class="equation-container">
+                    <img src="../img/酵母迁移.png" alt="酵母迁移图" class="equation-image">
+                </div>
+
+                <h2>4.炎症基因激活</h2>
+                <div class="equation">
+                    $$\frac{dQ_{inflammation}}{dt} = k_{inflammation\_activation} \cdot Q_{yeast\_move} \cdot (1 -
+                    \frac{Q_{inflammation}}{K_{inflammation}})$$
+                </div>
+                <ul>
+                    <li>$Q_{inflammation}$：炎症基因的浓度（单位：mg）。</li>
+                    <li>$k_{inflammation\_activation}$：炎症基因激活的速率常数（单位：min$^{-1}$）。</li>
+                    <li>$K_{inflammation}$：炎症基因的最大浓度（单位：mg）。</li>
+                </ul>
+                <div class="equation-container">
+                    <img src="../img/炎症激活.png" alt="炎症激活图" class="equation-image">
+                </div>
+
+                <h2>5.细外囊泡分泌</h2>
+                <div class="equation">
+                    $$\frac{dQ_{exosome}}{dt} = k_{secretion} \cdot Q_{inflammation} \cdot (1 -
+                    \frac{Q_{exosome}}{K_{exosome}})$$
+                </div>
+                <ul>
+                    <li>$Q_{exosome}$：细外囊泡的浓度（单位：mg）。</li>
+                    <li>$k_{secretion}$：细外囊泡分泌的速率常数（单位：min$^{-1}$）。</li>
+                    <li>$K_{exosome}$：细外囊泡的最大浓度（单位：mg）。</li>
+                </ul>
+                <div class="equation-container">
+                    <img src="../img/囊泡.png" alt="囊泡图" class="equation-image">
+                </div>
+
+                <h2>6.自杀开关激活</h2>
+                <div class="equation">
+                    $$\frac{dQ_{suicide}}{dt} = k_{suicide} \cdot (1 - \frac{Q_{suicide}}{K_{suicide}})$$
+                </div>
+                <ul>
+                    <li>$Q_{suicide}$：自杀开关的浓度（单位：mg）。</li>
+                    <li>$k_{suicide}$：自杀开关激活的速率常数（单位：min$^{-1}$）。</li>
+                    <li>$K_{suicide}$：自杀开关的最大浓度（单位：mg）。</li>
+                </ul>
+                <div class="equation-container">
+                    <img src="../img/自杀开关.png" alt="自杀开关图" class="equation-image">
+                </div>
+
+                <h2>模型求解与可视化</h2>
+                <h3>ODE求解：</h3>
+                <p>使用 scipy.integrate.solve_ivp 来求解这些常微分方程（ODE）。
+                </p>
+
+                <h3>可视化：</h3>
+                <p>我们使用 matplotlib 来绘制每个变量（茶成分、酵母、酵母迁移、炎症基因、细外囊泡和自杀开关）的浓度随时间变化的图形。</p>
+                <p>每个图表展示了这些浓度在模拟时间范围内的动态变化。</p>
+
+                <h2>Python 实现</h2>
+
+                <pre><code class="language-python">
+                import numpy as np
+                import matplotlib.pyplot as plt
+                from scipy.integrate import solve_ivp
+                
+                # 定义常数
+                k_absorption = 0.05  # 茶成分的吸收速率 (min^-1)
+                k_activation = 0.2   # 激活酵母的速率 (min^-1)
+                K = 1.0              # 最大酵母定植容量
+                k_migration = 0.02   # 酵母迁移速率 (min^-1)
+                K_move = 1.0         # 酵母迁移的最大容量
+                k_inflammation_activation = 0.05  # 炎症趋向基因激活速率 (min^-1)
+                K_inflammation = 1.0  # 最大炎症基因浓度
+                k_secretion = 0.1    # 细外囊泡分泌速率 (min^-1)
+                K_exosome = 1.0      # 最大细外囊泡浓度
+                k_suicide = 0.1      # 自杀开关激活速率 (min^-1)
+                K_suicide = 1.0      # 最大自杀开关浓度
+                
+                # 初始条件
+                Q_tea_0 = 100  # 茶成分的初始浓度 (mg)
+                Q_yeast_0 = 0  # 初始酵母浓度
+                Q_yeast_move_0 = 0  # 初始酵母迁移浓度
+                Q_inflammation_0 = 0  # 初始炎症基因浓度
+                Q_exosome_0 = 0  # 初始细外囊泡浓度
+                Q_suicide_0 = 0  # 初始自杀开关浓度
+                
+                # ODE模型
+                def model(t, y):
+                    Q_tea, Q_yeast, Q_yeast_move, Q_inflammation, Q_exosome, Q_suicide = y
+                    
+                    # 茶成分的吸收
+                    dQ_tea_dt = -k_absorption * Q_tea
+                    
+                    # 酵母的定植与激活
+                    dQ_yeast_dt = k_activation * Q_tea * (1 - Q_yeast / K)
+                    
+                    # 酵母迁移
+                    dQ_yeast_move_dt = k_migration * Q_yeast * (1 - Q_yeast_move / K_move)
+                    
+                    # 炎症趋向基因激活
+                    dQ_inflammation_dt = k_inflammation_activation * Q_yeast_move * (1 - Q_inflammation / K_inflammation)
+                    
+                    # 细外囊泡分泌
+                    dQ_exosome_dt = k_secretion * Q_inflammation * (1 - Q_exosome / K_exosome)
+                    
+                    # 自杀开关激活
+                    dQ_suicide_dt = k_suicide * (1 - Q_suicide / K_suicide)
+                    
+                    return [dQ_tea_dt, dQ_yeast_dt, dQ_yeast_move_dt, dQ_inflammation_dt, dQ_exosome_dt, dQ_suicide_dt]
+                
+                # 初始条件
+                y0 = [Q_tea_0, Q_yeast_0, Q_yeast_move_0, Q_inflammation_0, Q_exosome_0, Q_suicide_0]
+                
+                # 时间范围
+                t_span = (0, 100)  # 模拟100分钟
+                t_eval = np.linspace(0, 100, 500)
+                
+                # 求解ODE
+                solution = solve_ivp(model, t_span, y0, t_eval=t_eval)
+                
+                # 可视化结果
+                plt.figure(figsize=(12, 8))
+                
+                # 茶成分浓度
+                plt.subplot(2, 3, 1)
+                plt.plot(solution.t, solution.y[0], label='Tea Concentration')
+                plt.xlabel('Time (min)')
+                plt.ylabel('Tea Concentration (mg)')
+                plt.legend()
+                
+                # 酵母浓度
+                plt.subplot(2, 3, 2)
+                plt.plot(solution.t, solution.y[1], label='Yeast Concentration')
+                plt.xlabel('Time (min)')
+                plt.ylabel('Yeast Concentration (mg)')
+                plt.legend()
+                
+                # 酵母迁移浓度
+                plt.subplot(2, 3, 3)
+                plt.plot(solution.t, solution.y[2], label='Yeast Migration')
+                plt.xlabel('Time (min)')
+                plt.ylabel('Yeast Migration (mg)')
+                plt.legend()
+                
+                # 炎症基因浓度
+                plt.subplot(2, 3, 4)
+                plt.plot(solution.t, solution.y[3], label='Inflammation Gene')
+                plt.xlabel('Time (min)')
+                plt.ylabel('Inflammation Gene (mg)')
+                plt.legend()
+                
+                # 细外囊泡浓度
+                plt.subplot(2, 3, 5)
+                plt.plot(solution.t, solution.y[4], label='Exosome Concentration')
+                plt.xlabel('Time (min)')
+                plt.ylabel('Exosome Concentration (mg)')
+                plt.legend()
+                
+                # 自杀开关浓度
+                plt.subplot(2, 3, 6)
+                plt.plot(solution.t, solution.y[5], label='Suicide Switch Concentration')
+                plt.xlabel('Time (min)')
+                plt.ylabel('Suicide Switch Concentration (mg)')
+                plt.legend()
+                
+                plt.tight_layout()
+                plt.show()
+                    </code></pre>
+
+                <h2>总结</h2>
+                <p>
+                    在这个模型中，我们模拟了茶成分对酵母细胞的激活、定植、迁移以及后续治疗过程。
+                    通过调整不同的速率常数和容量，模型能够准确地模拟酵母在体内的行为。
+                    通过数值解ODE，我们能够得到每个时间点上各个变量的变化情况，并通过图形化展示模型的预测结果。
+                    这为实际应用提供了理论支持，并可在实际实验中进行进一步验证和优化。
+                </p>
+                </p>
+            </div>
+        </main>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

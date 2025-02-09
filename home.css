@@ -1,0 +1,696 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f5fff9;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.mt-197 {
+  margin-top: 12.31rem;
+}
+.ml-77 {
+  margin-left: 4.81rem;
+}
+.mt-37 {
+  margin-top: 2.31rem;
+}
+.mt-41 {
+  margin-top: 2.56rem;
+}
+.ml-110 {
+  margin-left: 6.88rem;
+}
+.mt-112 {
+  margin-top: 7rem;
+}
+.mt-33 {
+  margin-top: 2.06rem;
+}
+.ml-61 {
+  margin-left: 3.81rem;
+}
+.ml-63 {
+  margin-left: 3.94rem;
+}
+.page {
+  background-color: #f5fff9;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.group {
+  padding: 1.38rem 2rem 66.5rem;
+  height: 72.38rem;
+}
+.image_2 {
+  border-radius: 50%;
+  width: 4.31rem;
+  height: 4.5rem;
+}
+.pos_3 {
+  position: absolute;
+  left: 2rem;
+  top: 1.38rem;
+}
+.font {
+  font-size: 0.75rem;
+  font-family: Give You Glory;
+  line-height: 0.88rem;
+  color: #000000;
+}
+.pos_4 {
+  position: absolute;
+  left: 7.03rem;
+  top: 2.99rem;
+}
+.pos_9 {
+  position: absolute;
+  left: 7.02rem;
+  top: 4.17rem;
+}
+.group_2 {
+  padding: 6.75rem 0 5.63rem;
+}
+.pos {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.section {
+  padding: 32.68rem 0 15.13rem;
+  background-color: #ffffff;
+}
+.image_3 {
+  width: 10.56rem;
+  height: 12.19rem;
+}
+.image_5 {
+  margin-right: 3.16rem;
+}
+.image {
+  filter: drop-shadow(0rem 0.25rem 0.13rem #00000040);
+  width: 62.13rem;
+  height: 34.38rem;
+}
+.pos_2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.section_2 {
+  padding: 11.06rem 0 0.88rem;
+  background-image: url("https://ide.code.fun/api/image?token=67a4ea6f4ae84d001224f4af&name=9f712099a878d20b9c9a6ddc8ef63e1e.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 69.63rem;
+}
+.pos_11 {
+  position: absolute;
+  left: 0;
+  top: 15rem;
+}
+.image_4 {
+  margin-left: -0.79rem;
+}
+.group_4 {
+  margin-left: -2.69rem;
+  width: 41.44rem;
+}
+.image_7 {
+  margin-top: 4.63rem;
+  width: 12.13rem;
+  height: 10.13rem;
+}
+.group_5 {
+  padding-bottom: 8.78rem;
+  width: 19.66rem;
+}
+.image_6 {
+  width: 10.88rem;
+  height: 12.19rem;
+}
+.pos_14 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.pos_12 {
+  position: absolute;
+  right: 13.66rem;
+  top: 28.31rem;
+}
+.pos_13 {
+  position: absolute;
+  right: 4rem;
+  top: 33.34rem;
+}
+.font_3 {
+  font-size: 5.63rem;
+  font-family: Caveat;
+  line-height: 6.75rem;
+  font-weight: 700;
+  color: #f3dad1;
+}
+.text_1 {
+  margin-left: 0.51rem;
+}
+.text_5 {
+  margin-left: 0.16rem;
+}
+.group_3 {
+  width: 27.88rem;
+}
+.pos_5 {
+  position: absolute;
+  right: 12.81rem;
+  top: 3.25rem;
+}
+.text-wrapper_5 {
+  flex: 1 1 6.19rem;
+}
+.text-wrapper_1 {
+  padding: 1rem 0 0.17rem;
+  background-color: #f5fff9;
+  height: 2.56rem;
+}
+.text-wrapper_6 {
+  flex: 1 1 6.19rem;
+  margin-left: 0.88rem;
+}
+.text-wrapper {
+  padding: 1rem 0 0.11rem;
+  background-color: #f5fff9;
+  height: 2.56rem;
+}
+.view_3 {
+  padding: 0.94rem 0 0.16rem;
+  background-color: #f5fff9;
+  height: 2.56rem;
+}
+.text_3 {
+  margin-right: 0.1rem;
+}
+.font_2 {
+  font-size: 1.5rem;
+  font-family: Microsoft YaHei UI;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+}
+.text_2 {
+  line-height: 1.45rem;
+}
+.text {
+  line-height: 1.4rem;
+}
+.text_19 {
+  line-height: 1.47rem;
+}
+.text-wrapper_3 {
+  flex: 1 1 6.19rem;
+  margin-left: 1.38rem;
+}
+.text-wrapper_4 {
+  padding: 0.95rem 0 0.17rem;
+  background-color: #f5fff9;
+  height: 2.56rem;
+}
+.text_4 {
+  line-height: 1.44rem;
+}
+.group_6 {
+  margin-top: 9.99rem;
+}
+.font_4 {
+  font-size: 3.75rem;
+  font-family: Microsoft YaHei UI;
+  line-height: 4.5rem;
+  font-weight: 700;
+  color: #eacac0;
+}
+.group_7 {
+  margin-top: 3.95rem;
+  padding: 0 7.38rem;
+}
+.section_3 {
+  margin-right: 0.25rem;
+  padding: 2.63rem 3.88rem 3.88rem;
+  background-color: #ffffff;
+  border-radius: 1.56rem;
+  overflow: hidden;
+}
+.image_8 {
+  border-radius: 1.56rem;
+  width: 14.69rem;
+  height: 13.63rem;
+}
+.group_8 {
+  margin-right: 0.24rem;
+  margin-top: 1.47rem;
+}
+.text_20 {
+  align-self: flex-start;
+}
+.font_5 {
+  font-size: 4rem;
+  font-family: Microsoft YaHei UI;
+  font-weight: 700;
+  color: #d48972;
+}
+.text_6 {
+  line-height: 3.09rem;
+}
+.font_6 {
+  font-size: 1.25rem;
+  font-family: Microsoft YaHei UI;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #d48972;
+}
+.section_4 {
+  margin-right: 0.25rem;
+  padding: 3.81rem 3.51rem 3.8rem;
+  background-color: #f5fff9;
+  border-radius: 1.56rem;
+  overflow: hidden;
+}
+.group_9 {
+  margin-top: 0.99rem;
+}
+.text_7 {
+  margin-right: 0.12rem;
+  line-height: 3.08rem;
+}
+.image_9 {
+  margin-right: 1.3rem;
+  border-radius: 1.56rem;
+  width: 15.5rem;
+  height: 12.5rem;
+}
+.section_5 {
+  margin-right: 0.25rem;
+  padding: 4.31rem 3.88rem 2.23rem;
+  background-color: #ffffff;
+  border-radius: 1.56rem;
+  overflow: hidden;
+}
+.image_10 {
+  border-radius: 1.56rem;
+  width: 13.94rem;
+  height: 11.5rem;
+}
+.text_8 {
+  line-height: 3.13rem;
+}
+.group_10 {
+  margin-top: 5.5rem;
+  padding-left: 8rem;
+  padding-right: 7.54rem;
+}
+.image_11 {
+  border-radius: 1.5rem;
+  filter: drop-shadow(0rem 0.25rem 0.13rem #00000040);
+  width: 26.56rem;
+  height: 12.44rem;
+}
+.font_7 {
+  font-size: 1.25rem;
+  font-family: Microsoft YaHei UI;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #032d30;
+}
+.group_11 {
+  padding-left: 4.07rem;
+}
+.font_8 {
+  font-size: 1.25rem;
+  font-family: Microsoft YaHei UI;
+  font-weight: 700;
+  color: #e3947b;
+}
+.text_9 {
+  line-height: 1.36rem;
+}
+.text_10 {
+  width: 33.75rem;
+}
+.image_12 {
+  margin-top: 1.36rem;
+  border-radius: 1.88rem;
+  filter: drop-shadow(0rem 0.25rem 0.13rem #00000040);
+  width: 21.31rem;
+  height: 16.44rem;
+}
+.text_11 {
+  margin-right: 3.12rem;
+  line-height: 1.23rem;
+}
+.group_12 {
+  margin-top: 11.38rem;
+  width: 50.91rem;
+}
+.image_13 {
+  border-radius: 50%;
+  width: 9.56rem;
+  height: 9.56rem;
+}
+.group_13 {
+  margin-top: 0.22rem;
+  height: 9.38rem;
+}
+.font_9 {
+  font-size: 2rem;
+  font-family: Microsoft YaHei UI;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #032d30;
+}
+.text_12 {
+  color: #16dea1;
+}
+.group_14 {
+  margin: 4.38rem 0.46rem 0 0.97rem;
+}
+.text_13 {
+  margin-top: 0.18rem;
+}
+.text_14 {
+  margin-top: 7.49rem;
+  width: 45.44rem;
+}
+.text_15 {
+  margin-top: 6.75rem;
+  text-align: right;
+  width: 50.63rem;
+}
+.image_18 {
+  margin-left: 39.24rem;
+  margin-top: 8.9rem;
+  width: 1.62rem;
+  height: 1.09rem;
+}
+.group_16 {
+  margin: 0.28rem 1.48rem 0 0.29rem;
+}
+.image_19 {
+  margin-top: 1.41rem;
+  border-radius: 1.56rem;
+  width: 30.31rem;
+  height: 19.56rem;
+}
+.group_15 {
+  padding-bottom: 1.54rem;
+  width: 11.84rem;
+}
+.pos_15 {
+  position: absolute;
+  left: 34.61rem;
+  top: 5.7rem;
+}
+.image_14 {
+  width: 9.5rem;
+  height: 5.88rem;
+}
+.image_15 {
+  width: 10.94rem;
+  height: 6.63rem;
+}
+.pos_16 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.image_16 {
+  width: 19.38rem;
+  height: 7.19rem;
+}
+.pos_17 {
+  position: absolute;
+  left: 50%;
+  top: 19.53rem;
+  transform: translateX(-50%);
+}
+.image_17 {
+  width: 12.19rem;
+  height: 9.94rem;
+}
+.pos_18 {
+  position: absolute;
+  right: 36.55rem;
+  bottom: 21.2rem;
+}
+.group_17 {
+  margin-top: 2.69rem;
+  padding-left: 7.56rem;
+  padding-right: 4rem;
+}
+.image_20 {
+  width: 42rem;
+  height: 23.5rem;
+}
+.image_21 {
+  width: 32.5rem;
+  height: 23.5rem;
+}
+.section_6 {
+  margin-top: 7.13rem;
+  padding: 2.06rem 4.45rem 2rem;
+  background-color: #fcfffd;
+  border-radius: 1.56rem;
+}
+.text_16 {
+  color: #032d30;
+  font-size: 2rem;
+  font-family: Microsoft YaHei UI;
+  font-weight: 700;
+  line-height: 1.94rem;
+}
+.image_22 {
+  margin-right: 1.18rem;
+  width: 18.5rem;
+  height: 24.88rem;
+}
+.section_7 {
+  margin-top: 7.19rem;
+  background-color: #032d30;
+  height: 17.63rem;
+}
+.nav-link {
+  font-size: 1.5rem;
+  font-family: Microsoft YaHei UI;
+  font-weight: 700;
+  color: #000000;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #16dea1;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 0.5rem;
+}
+.arthritis-info-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #032d30;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.arthritis-info-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-front {
+  background-color: #ffffff;
+}
+
+.card-back {
+  background-color: #f5fff9;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d48972;
+  margin-top: 1rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #032d30;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .arthritis-info-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+.group_10,
+.group_12,
+.group_14,
+.group_17,
+.section_6,
+.section_7 {
+  background-color: #f5fff9;
+}
+
+.group_10,
+.group_12,
+.group_14,
+.group_17,
+.section_6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+@media (max-width: 1200px) {
+  .page,
+  .arthritis-info-container,
+  .group_10,
+  .group_12,
+  .group_14,
+  .group_17,
+  .section_6 {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.card-image {
+  animation: wiggle 1s ease-in-out infinite;
+}
+#choroplethMap {
+  width: 100%;
+  height: 0;
+  padding-bottom: 62.5%; /* 这会创建一个 8:5 的宽高比 */
+  max-width: 800px; /* 限制最大宽度 */
+  margin: 0 auto; /* 居中显示 */
+  background-color: transparent; /* 使背景透明 */
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s, transform 1s;
+}
+
+#choroplethMap.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 1200px) {
+  #choroplethMap {
+    padding-bottom: 50%; /* 调整小屏幕的宽高比 */
+  }
+}
+.animated-text {
+  font-size: 24px;
+  color: #032d30;
+  font-weight: bold;
+}
+
+.number {
+  font-weight: bold;
+  color: #16dea1;
+  font-weight: bold;
+  font-size: 40px;
+}

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>主页</title>
+  <link rel="stylesheet" href="../../index.css" />
+  <link rel="stylesheet" href="./home.css" />
+  <script type="text/javascript" src="./home.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    .scroll-animation {
+      opacity: 0;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .scroll-animation.animate {
+      opacity: 1;
+      transform: translate(0, 0) !important;
+    }
+
+    .scroll-animation[data-direction="up"] {
+      transform: translateY(50px);
+    }
+
+    .scroll-animation[data-direction="down"] {
+      transform: translateY(-50px);
+    }
+
+    .scroll-animation[data-direction="left"] {
+      transform: translateX(50px);
+    }
+
+    .scroll-animation[data-direction="right"] {
+      transform: translateX(-50px);
+    }
+  </style>
+  <style>
+    @font-face {
+      font-family: 'YourFontName';
+      src: url('../字体/your-font.woff2') format('woff2'),
+        url('../字体/your-font.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .artistic-font {
+      font-family: 'YourFontName', Arial, sans-serif;
+    }
+
+    .subtle-jumping-text span {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .subtle-jumping-text span.jump {
+      animation: subtleJump 0.5s ease-in-out;
+    }
+
+    @keyframes subtleJump {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .chart {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      width: 100%;
+    }
+
+    .text {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #032d30;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
+      .chart {
+        width: 65%;
+        margin-right: 5%;
+        margin-bottom: 0;
+      }
+
+      .info {
+        width: 30%;
+      }
+    }
+  </style>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="flex-row self-stretch relative group">
+      <img class="image_2 pos_3" src="../img/图标.png" />
+      <span class="font pos_4 artistic-font">morning</span>
+      <span class="font pos_9 artistic-font">rainy song</span>
+      <div class="flex-col justify-start group_2 pos">
+        <div class="flex-col justify-start items-end section">
+          <img class="image_3 image_5"
+            src="https://ide.code.fun/api/image?token=67a4ea6f4ae84d001224f4af&name=282b90821125856d07d4e13670b7550c.png" />
+        </div>
+        <img class="image pos_2"
+          src="https://ide.code.fun/api/image?token=67a4ea6f4ae84d001224f4af&name=04f75e5c85619bd35da1e89eb6993e05.png" />
+        <div class="flex-col items-start section_2 pos_11">
+          <img class="image_3 image_4"
+            src="https://ide.code.fun/api/image?token=67a4ea6f4ae84d001224f4af&name=1d5b5082e0ee551d4fc7bc7412f78024.png" />
+          <div class="flex-row justify-between group_4 mt-197">
+            <img class="self-start image_7"
+              src="https://ide.code.fun/api/image?token=67a4ea6f4ae84d001224f4af&name=98a55a45243782919e36c55be006801b.png" />
+            <div class="flex-col justify-start items-end relative group_5">
+              <img class="image_6"
+                src="https://ide.code.fun/api/image?token=67a4ea6f4ae84d001224f4af&name=4f02cdde8ee905e0ad0165fcc0a6654e.png" />
+              <img class="image_3 pos_14"
+                src="https://ide.code.fun/api/image?token=67a4ea6f4ae84d001224f4af&name=1d5b5082e0ee551d4fc7bc7412f78024.png" />
+            </div>
+          </div>
+        </div>
+        <img class="image_3 pos_12"
+          src="https://ide.code.fun/api/image?token=67a4ea6f4ae84d001224f4af&name=282b90821125856d07d4e13670b7550c.png" />
+        <div class="flex-col items-start pos_13 subtle-jumping-text">
+          <div class="font_3 text_1 artistic-font">
+            <span>T</span><span>e</span><span>a</span><span>s</span><span>p</span><span>o</span><span>o</span><span>n</span>
+          </div>
+          <div class="font_3 text_5 mt-2 artistic-font">
+            <span>O</span><span>p</span><span>e</span><span>n</span><span>s</span>
+          </div>
+          <div class="font_3 mt-2 artistic-font">
+            <span>N</span><span>a</span><span>n</span><span>o</span>
+            <span>H</span><span>o</span><span>n</span><span>e</span><span>y</span><span>c</span><span>o</span><span>m</span><span>b</span>
+          </div>
+        </div>
+        <nav class="flex-row group_3 pos_5">
+          <ul class="flex-row items-center justify-between w-full">
+            <li><a href="home.html" class="nav-link">HOME</a></li>
+            <li><a href="项目.html" class="nav-link">项目</a></li>
+            <li><a href="技术.html" class="nav-link">技术</a></li>
+            <li><a href="人类实践.html" class="nav-link">人类实践</a></li>
+            <li><a href="团队.html" class="nav-link">团队</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="flex-col items-center self-stretch group_6">
+      <span class="font_4">当今世界</span>
+      <span class="font_4 mt-4">仍然有许多人备受关节炎的困扰</span>
+    </div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div class="arthritis-info-container">
+      <h2 class="section-title">关节炎对不同群体的影响</h2>
+      <div class="arthritis-info-cards">
+        <div class="card scroll-animation" data-direction="up">
+          <div class="card-inner">
+            <div class="card-front">
+              <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"></script>
+              <dotlottie-player src="https://lottie.host/c9bf237b-4715-4508-a768-99ccca4cb3e0/TjSJI98M6p.lottie"
+                background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+              <h3 class="card-title">#1 老年人</h3>
+            </div>
+            <div class="card-back">
+              <p class="card-text">
+                关节炎对老年人的影响深远。随着年龄增长，关节逐渐退化，炎症加剧，导致关节疼痛、僵硬和肿胀。这些症状使老年人活动受限，日常生活变得更加困难。简单的走路、上下楼、甚至穿衣等动作都可能变得艰难，严重影响生活质量。此外，长期的疼痛还可能导致情绪低落和心理压力，进一步影响身心健康。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card scroll-animation" data-direction="up">
+          <div class="card-inner">
+            <div class="card-front">
+              <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"></script>
+              <dotlottie-player src="https://lottie.host/4e461244-9b2d-420b-9f24-0b62e226c21a/XrnBS29lLI.lottie"
+                background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+              <h3 class="card-title">#2 运动员</h3>
+            </div>
+            <div class="card-back">
+              <p class="card-text">
+                关节炎对运动员的影响也非常显著。频繁的高强度运动和身体负荷使得运动员的关节容易受到伤害，进而引发关节炎。关节疼痛、僵硬和肿胀不仅限制运动员的训练和比赛表现，还可能导致运动能力下降。此外，关节炎引发的持续疼痛和不适也会导致情绪波动和心理压力，影响其恢复过程和整体心理健康。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card scroll-animation" data-direction="up">
+          <div class="card-inner">
+            <div class="card-front">
+              <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"></script>
+              <dotlottie-player src="https://lottie.host/706ba4e6-29fe-4abd-b0e5-e6096445bfea/H8cg9gAscp.lottie"
+                background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+              <h3 class="card-title">#3 军人</h3>
+            </div>
+            <div class="card-back">
+              <p class="card-text">
+                关节炎对军人的影响同样深远。军人日常承担着高强度的体能训练和复杂的作战任务，长时间的负重和剧烈运动容易导致关节受伤或磨损，从而引发关节炎。疼痛、僵硬和肿胀限制了他们的行动能力，影响了执行任务的效率和战斗力。长期的疼痛和关节功能受限可能导致军人无法继续执行某些高强度任务，甚至提前退役，严重影响其职业生涯和身心健康。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-col self-stretch group_10">
+    <div class="flex-row items-center scroll-animation" data-direction="right">
+      <div id="choroplethMap" class="shrink-0 image_11"></div>
+      <div class="flex-col flex-1 ml-110 scroll-animation" data-direction="left">
+        <span class="self-start font_7">通过GBD数据库可知骨关节炎在全球各个国家都有不同程度的影响。</span>
+        <span class="self-stretch font_7">
+          根据《柳叶刀风湿病学》2023年的研究，全球30岁及以上人群中约有15%患有骨关节炎。
+        </span>
+      </div>
+    </div>
+    <div class="flex-col group_11 mt-32">
+      <div class="flex-row items-start self-stretch">
+        <div class="flex-col flex-1 scroll-animation" data-direction="right">
+          <div class="animated-text">
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <div><br></div>
+            <span class="text">根据GBD数据库显示，2021年相比1990年骨关节炎发生率增加了</span>
+            <span class="number" data-target="50.8013">0</span>
+            <span class="text">%</span>
+          </div>
+        </div>
+        <img class="image_12 ml-30 scroll-animation" data-direction="left" src="../img/世界.png" />
+      </div>
+      <span class="self-end font_8 text_11 mt-33">世界骨关节炎发病率趋势图</span>
+    </div>
+  </div>
+  <div class="flex-row self-center group_12">
+    <img class="shrink-0 image_13"
+      src="https://ide.code.fun/api/image?token=67a4ea6f4ae84d001224f4af&name=38557978f3b7cd87ea45a1d7cf9a25f5.png" />
+    <div class="flex-1 group_13 ml-61">
+      <span class="font_9">
+        通过研究患病人群和中国人的习惯
+        <br />
+      </span>
+      <span class="font_9">我们设计了更适合中国人的治疗方法：</span>
+      <span class="font_9 text_12 scroll-animation" data-direction="up">茶匙启纳米蜂巢</span>
+    </div>
+  </div>
+  <div class="flex-col self-stretch relative group_14 scroll-animation" data-direction="right">
+    <span class="self-center font_9">中国是茶的发源地</span>
+    <span class="self-center font_9 text_13">茶的发现和利用已有数千年的历史。</span>
+    <span class="self-start font_9 text_14">
+      据传神农尝百草时发现了茶的解毒功能，这为茶的食用开启了先河。
+      <br />
+    </span>
+    <span class="self-end font_9 text_15 scroll-animation" data-direction="left">
+      到了唐代，茶已成为人们日常生活中的常见饮品，陆羽所著的《茶经》更是对茶的种植、制作、品饮等方面进行了系统阐述，标志着茶文化的发展进入了一个新阶段
+    </span>
+    <div> <br></div>
+    <div> <br></div>
+    <div> <br></div>
+    <div class="container">
+      <div id="chart1" class="chart" scroll-animation" data-direction="right"></div>
+      <div class="info" scroll-animation" data-direction="left">
+        <p class="text">
+          如今，依旧有许多中国人喝茶。数据显示，2012-2025年全球茶叶市场总体呈增长态势，预计2025年市场规模将达到2667亿美元。数据显示，中国消费者基本有着喝茶的习惯，保持每天喝茶习惯的消费者占41.21%，一周喝茶两三次的消费者占49.17％
+        </p>
+        <table>
+          <tr>
+            <th>喝茶频率</th>
+            <th>消费者占比</th>
+          </tr>
+          <tr>
+            <td>每天喝茶</td>
+            <td>41.21%</td>
+          </tr>
+          <tr>
+            <td>一周喝茶两三次</td>
+            <td>49.17%</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="flex-col justify-start items-start group_15 pos_15">
+
+
+    </div>
+
+
+  </div>
+  <div class="flex-row justify-center self-stretch group_17">
+    <div id="chart2" style="width: 650px;height:500px;margin-left: 20px;" class="scroll-animation"
+      data-direction="right""></div>
+    <div id=" chart3" class="image_21 ml-63 scroll-animation" data-direction="left"
+      style="width: 400px; height: 400px;">
+    </div>
+  </div>
+  <div class="flex-row items-center self-center" data-direction="right"
+    style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 800px; margin: 0 auto; padding: 20px;">
+    <span class="self-start text_16" style="align-self: center; margin-bottom: 20px;">基本路线</span>
+    <span class="self-stretch font_7 mt-40" style="text-align: center; line-height: 1.6;">
+      患者口服茶后，酵母被激活，启用下游的骨靶向基因，使酵母能够移向骨关节处，到达骨关节处后再激活下游的炎症趋向基因，使酵母到达患处，随后酵母分泌带有生长因子和镇痛因子的细外囊泡，治疗患处，治疗完毕最后启动自杀开关，自我清除。
+    </span>
+    <img class="shrink-0 image_22 ml-30 scroll-animation" data-direction="up"
+      style="display: flex;justify-content: center;width: 500px;height: 700px;" src="../img/线路图.png" />
+  </div>
+  </div>
+
+  <div class="self-stretch section_7">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <dotlottie-player src="https://lottie.host/6db9eef3-1492-4a15-a13c-be257b1f9dfe/HbnY4A98JV.lottie"
+      background="transparent" speed="1" style="width: 300px; height: 300px;margin: auto;" loop
+      autoplay></dotlottie-player>
+  </div>
+  <div>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <dotlottie-player src="https://lottie.host/220191da-a528-4d73-827b-1f37d198994f/wNdqSEfMRO.lottie"
+      background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+  </div>
+  </div>
+
+
+  <footer
+    style="background-color: rgb(109, 138, 116); color: white; padding: 40px 0; font-family: 'Arial', sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="font-size: 1.2em; margin-bottom: 15px;">联系我们</h3>
+        <p style="font-size: 0.9em; line-height: 1.6;">邮箱: 1000000@qq.com</p>
+        <p style="font-size: 0.9em; line-height: 1.6;">电话: +86 1888888888</p>
+      </div>
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="font-size: 1.2em; margin-bottom: 15px;">关注我们</h3>
+        <p style="font-size: 0.9em; line-height: 1.6;">微博 | 微信 | 知乎</p>
+      </div>
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="font-size: 1.2em; margin-bottom: 15px;">友情链接</h3>
+        <p><a href="1.html"
+            style="color: white; text-decoration: none; font-size: 0.9em; line-height: 1.6;">隐藏秘密资源(p≧w≦q)</a></p>
+        <p><a href="1.html" style="color: white; text-decoration: none; font-size: 0.9em; line-height: 1.6;">合成生物学资源</a>
+        </p>
+      </div>
+    </div>
+    <div
+      style="text-align: center; margin-top: 30px; font-size: 0.8em; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+      <p>&copy; 2025 iGEM morning rainy song</p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var scrollAnimations = document.querySelectorAll('.scroll-animation');
+
+      var observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      scrollAnimations.forEach(animation => {
+        // 如果没有指定方向，默认为向上滑入
+        if (!animation.getAttribute('data-direction')) {
+          animation.setAttribute('data-direction', 'up');
+        }
+        observer.observe(animation);
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const letters = document.querySelectorAll('.subtle-jumping-text span');
+
+      function randomJump() {
+        const randomLetter = letters[Math.floor(Math.random() * letters.length)];
+        randomLetter.classList.add('jump');
+
+        setTimeout(() => {
+          randomLetter.classList.remove('jump');
+        }, 500);
+      }
+
+      // 每2-5秒随机触发一次跳动
+      setInterval(() => {
+        if (Math.random() < 0.7) { // 70%的概率触发跳动
+          randomJump();
+        }
+      }, Math.random() * 1000 + 1000);
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var chartDom1 = document.getElementById('chart1');
+      var myChart1 = echarts.init(chartDom1);
+      var option1;
+
+      // 完整的市场规模数据（亿元人民币）
+      const fullMarketSize = [2569, 2967, 3262, 3681, 4131, 4107, 4789, 5449, 6212, 7086];
+      const fullYears = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'];
+
+      // 初始显示2015-2019的数据
+      let currentIndex = 4; // 从2019年开始
+      let marketSize = fullMarketSize.slice(0, currentIndex + 1);
+      let years = fullYears.slice(0, currentIndex + 1);
+
+      // 计算同比增长率
+      function calculateGrowthRate(data) {
+        return data.map((value, index) => {
+          if (index === 0) return null;
+          return ((value - data[index - 1]) / data[index - 1] * 100).toFixed(1);
+        });
+      }
+
+      function updateChart1() {
+        let growthRate = calculateGrowthRate(marketSize);
+
+        option1 = {
+          title: {
+            text: '茶叶市场规模及增长率',
+            left: 'center'
+          },
+          tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+              type: 'cross',
+              crossStyle: {
+                color: '#999'
+              }
+            }
+          },
+          toolbox: {
+            feature: {
+              dataView: { show: true, readOnly: false },
+              magicType: { show: true, type: ['line', 'bar'] },
+              restore: { show: true },
+              saveAsImage: { show: true }
+            }
+          },
+          legend: {
+            data: ['市场规模', '同比增长率'],
+            top: 25
+          },
+          xAxis: [
+            {
+              type: 'category',
+              data: years,
+              axisPointer: {
+                type: 'shadow'
+              }
+            }
+          ],
+          yAxis: [
+            {
+              type: 'value',
+              name: '市场规模',
+              min: 0,
+              max: 8000,
+              interval: 1000,
+              axisLabel: {
+                formatter: '{value}'
+              }
+            },
+            {
+              type: 'value',
+              name: '增长率',
+              min: 0,
+              max: 24,
+              interval: 3,
+              axisLabel: {
+                formatter: '{value}%'
+              }
+            }
+          ],
+          series: [
+            {
+              name: '市场规模',
+              type: 'bar',
+              data: marketSize,
+              itemStyle: {
+                color: new echarts.graphic.LinearGradient(
+                  0, 0, 0, 1,
+                  [
+                    { offset: 0, color: '#e1fff2' },
+                    { offset: 1, color: '#bde4ff' }
+                  ]
+                )
+              },
+
+            },
+            {
+              name: '同比增长率',
+              type: 'line',
+              yAxisIndex: 1,
+              data: growthRate,
+              itemStyle: {
+                color: '#d6ecff'
+              },
+              lineStyle: {
+                color: '#d6ecff'
+              }
+            }
+          ]
+        };
+
+        myChart1.setOption(option1);
+      }
+
+      // 初始化图表
+      updateChart1();
+
+      // 每3秒添加一年的数据
+      let timer = setInterval(() => {
+        currentIndex++;
+        if (currentIndex >= fullMarketSize.length) {
+          clearInterval(timer);
+          return;
+        }
+
+        marketSize = fullMarketSize.slice(0, currentIndex + 1);
+        years = fullYears.slice(0, currentIndex + 1);
+        updateChart1();
+      }, 3000);
+
+      // 第二个图表
+      var chartDom2 = document.getElementById('chart2');
+      var myChart2 = echarts.init(chartDom2);
+      var option2;
+
+      // 使用图片中的准确数据
+      const data = {
+        '英国': [
+          [2015, 5.2], [2016, 5.5], [2017, 5.0], [2018, 5.8],
+          [2019, 6.0], [2020, 6.2], [2021, 6.5], [2022, 6.8],
+          [2023, 7.0], [2024, 7.2]
+        ],
+        '印度': [
+          [2015, 10.2], [2016, 10.5], [2017, 10.0], [2018, 11.2],
+          [2019, 11.5], [2020, 11.8], [2021, 12.2], [2022, 12.8],
+          [2023, 13.0], [2024, 13.2]
+        ],
+        '土耳其': [
+          [2015, 18.5], [2016, 18.8], [2017, 17.5], [2018, 19.5],
+          [2019, 20.0], [2020, 20.5], [2021, 20.5], [2022, 21.0],
+          [2023, 20.8], [2024, 21.2]
+        ],
+        '中国': [
+          [2015, 22.5], [2016, 23.2], [2017, 21.8], [2018, 24.0],
+          [2019, 24.2], [2020, 24.5], [2021, 25.0], [2022, 25.5],
+          [2023, 25.2], [2024, 25.8]
+        ]
+      };
+
+      const countries = ['英国', '印度', '土耳其', '中国'];
+      const seriesList = [];
+
+      // 设置每个国家的颜色
+      const colors = {
+        '英国': '#fdcee5',    // 蓝色
+        '印度': '#fdf4f7',    // 绿色
+        '土耳其': '#c6e4f5',  // 紫色
+        '中国': '#acc4f2'     // 黄色
+      };
+
+      countries.forEach(country => {
+        seriesList.push({
+          name: country,
+          type: 'line',
+          smooth: false,
+          data: data[country],
+          showSymbol: true,
+          symbolSize: 6,
+          emphasis: {
+            focus: 'series'
+          },
+          lineStyle: {
+            width: 2,
+            color: colors[country]
+          },
+          itemStyle: {
+            color: colors[country]
+          },
+          areaStyle: {
+            opacity: 0.1,
+            color: colors[country]
+          }
+        });
+      });
+
+      option2 = {
+        animationDuration: 3000,
+        title: {
+          text: '全球主要国家茶叶市场规模趋势',
+          left: 'center',
+          top: 10
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross'
+          }
+        },
+        legend: {
+          data: countries,
+          top: 40
+        },
+        grid: {
+          right: 40,
+          left: 60,
+          top: 80,
+          bottom: 40
+        },
+        xAxis: {
+          type: 'value',
+          min: 2015,
+          max: 2024,
+          interval: 1,
+          name: '年份'
+        },
+        yAxis: {
+          type: 'value',
+          name: '市场规模（亿元）',
+          min: 0,
+          max: 30,
+          interval: 5,
+          axisLabel: {
+            formatter: '{value}'
+          }
+        },
+        series: seriesList
+      };
+
+      myChart2.setOption(option2);
+      // 第三个图表（饼图）
+      var chartDom3 = document.getElementById(' chart3');
+      var myChart3 = echarts.init(chartDom3);
+      var option3;
+
+      option3 = {
+        title: {
+          text: '全球茶叶生产量分布',
+          left: 'center',
+          top: 10
+        },
+        tooltip: {
+          trigger: 'item',
+          formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+          orient: 'vertical',
+          right: '5%',
+          top: 'center'
+        },
+        series: [
+          {
+            name: '茶叶生产量',
+            type: 'pie',
+            radius: ['40%', '70%'],
+            avoidLabelOverlap: true,
+            itemStyle: {
+              borderRadius: 10,
+              borderColor: '#fff',
+              borderWidth: 2
+            },
+            label: {
+              show: true,
+              formatter: '{b}: {c}'
+            },
+            emphasis: {
+              label: {
+                show: true,
+                fontSize: 14,
+                fontWeight: 'bold'
+              }
+            },
+            data: [
+              { value: 298.6, name: '中国' },
+              { value: 125.8, name: '印度' },
+              { value: 57.0, name: '肯尼亚' },
+              { value: 28.0, name: '土耳其' },
+              { value: 27.8, name: '斯里兰卡' },
+              { value: 18.6, name: '越南' },
+              { value: 71.1, name: '世界其他国家' }
+            ]
+          }
+        ],
+        color: [
+          '#acc4f2',  // 中国 - 蓝色
+          '#c6e4f5',  // 印度 - 绿色
+          '#fdf4f7',  // 肯尼亚 - 紫色
+          '#ddd6f8',  // 土耳其 - 黄色
+          '#d4dccd',  // 斯里兰卡 - 深蓝色
+          '#fdcee5',  // 越南 - 浅蓝色
+          '#feabd9'   // 世界其他国家 - 紫色
+        ]
+      };
+
+      myChart3.setOption(option3);
+      // 在 myChart3.setOption(option3); 之后添加以下代码
+
+      // 检查图表容器是否存在
+      if (!chartDom3) {
+        console.error('找不到 id 为 "chart3" 的图表容器');
+      } else {
+        // 检查图表是否成功初始化
+        if (!myChart3) {
+          console.error('chart3 初始化失败');
+        } else {
+          // 检查图表是否有尺寸
+          if (myChart3.getWidth() === 0 || myChart3.getHeight() === 0) {
+            console.error('chart3 的宽度或高度为零');
+          }
+
+          // 强制调整图表大小
+          myChart3.resize();
+
+          // 记录成功消息
+          console.log('chart3 已成功初始化并调整大小');
+        }
+      }
+
+      // 添加错误事件监听器
+      myChart3.on('error', function (error) {
+        console.error('ECharts 错误事件:', error);
+      });
+
+      // 响应式调整
+      // 响应式调整
+      window.addEventListener('resize', function () {
+        myChart1.resize();
+        myChart2.resize();
+        myChart3.resize();
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
